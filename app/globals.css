@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-navy: #0b1c33;
+  --color-navy-2: #11284a;
+  --color-ink: #0f2347;
+  --color-gold: #e2a623;
+  --color-gold-dark: #9a6a08;
+  --color-mist: #f4f6f9;
+  --font-sans: var(--font-manrope);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #ffffff;
+  color: #0f2347;
+  font-family: var(--font-manrope), Arial, sans-serif;
+}
+
+.container-x { width: 100%; max-width: 1240px; margin-inline: auto; padding-inline: 16px; }
+@media (min-width: 768px) { .container-x { padding-inline: 32px; } }
+
+.btn-gold {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--color-gold); color: #0b1c33; font-weight: 600; font-size: .95rem;
+  padding: .8rem 1.6rem; border-radius: 999px; transition: background .2s, transform .2s;
+}
+.btn-gold:hover { background: #f0b93c; transform: translateY(-1px); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .5rem;
+  border: 1.5px solid currentColor; font-weight: 600; font-size: .95rem;
+  padding: .75rem 1.55rem; border-radius: 999px; transition: background .2s;
+}
+.btn-outline:hover { background: rgba(255,255,255,.1); }
+
+.eyebrow { font-size: .9rem; font-weight: 700; letter-spacing: .02em; color: var(--color-gold-dark); }
+.on-dark .eyebrow { color: var(--color-gold); }
